@@ -1,0 +1,245 @@
+/* General body styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f2f6ff;
+    margin: 0;
+    padding: 0; /* Update padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust height for full-page view */
+    overflow: hidden; /* Hide overflow to prevent unnecessary scrolls */
+}
+
+/* Container styling */
+.container {
+    max-width: 100%;
+    width: 100%;
+    max-width: 450px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Full height to contain everything */
+    overflow: hidden; /* Prevent content from spilling outside */
+}
+
+/* Heading 1 styling */
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5em;
+    color: #4a90e2;
+    margin: 10px 0 20px;
+    text-align: center;
+    background: linear-gradient(to right, #0e54be, #f70505);
+    background-clip: text; /* Standard property */
+    -webkit-background-clip: text; /* For Chrome, Safari, and newer versions of Opera */
+    -webkit-text-fill-color: transparent; /* For webkit browsers */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+    
+    z-index: 1000;
+    background-color: white; /* Keep background visible */
+    padding: 10px;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Input field styling */
+input {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    border: 1px solid #5b86e5;
+    outline: none;
+    box-shadow: 0 0 8px rgba(91, 134, 229, 0.3);
+}
+
+/* Button styling */
+button {
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #36dcd4;
+    background-image: linear-gradient(to right, #36d1dc, #5b86e5);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background-color: #4a90e2;
+    box-shadow: 0 5px 15px rgba(74, 144, 226, 0.4);
+}
+
+/* Loan Data Section Styling */
+.customer {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Search bar styling */
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    padding: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-bar i {
+    position: absolute;
+    right: 10px;
+    color: #888;
+    font-size: 18px;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 14px;
+    overflow-y: auto; /* Enable vertical scroll if necessary */
+}
+
+th, td {
+    border: 1px solid #eee;
+    padding: 10px;
+    text-align: left;
+    color: #333;
+}
+
+th {
+    background-color: #a3ce0a;
+    color: white;
+}
+
+td {
+    background-color: #ffffff;
+}
+
+td button {
+    padding: 5px 10px;
+    font-size: 12px;
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+td button:hover {
+    background-color: #36d1dc;
+}
+
+/* Main content scrolling */
+.main-content {
+    flex-grow: 1; /* Expand to take up available space */
+    overflow-y: auto; /* Enable scrolling in main content */
+}
+
+/* Adjustments for mobile responsiveness */
+@media screen and (max-width: 480px) {
+    .container {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    input, button {
+        font-size: 14px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+}
+
+/* Modal background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal content */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s;
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #888;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
